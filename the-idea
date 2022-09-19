@@ -1,0 +1,68 @@
+make different password managers, programming languages and database
+
+languages, python, java, JavaScript,
+
+framework react, react-native, android,django,
+
+databases mySQl, json-server, mongodb-server, postgresql-server
+
+First try react, mySQl, json-server,
+    install MySQl and workbench mySQl
+    https://youtu.be/TG6WAnyeDRw
+    check for mySQl
+        mysql --version
+    install mySQl if on version 
+        1. sudo apt update
+        2. sudo apt upgrade -y
+        3. sudo apt install mysql-server -y
+    check the install of mySQl by checking the version again: mysql --version
+        mysql  Ver 8.0.30-0ubuntu0.20.04.2 for Linux on x86_64 ((Ubuntu))
+    set password
+        1. sudo mysql_secure_installation
+            validate the password y|Y for yes for any other key
+            for medium password 1
+            problem 
+        fix 
+        sudo mysql
+        in mysql run the following commmand
+        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'mynewpassword';
+        exit;
+        sudo mysql_secure_installation
+            then reset password 1
+        login in is 
+        mysql -u root -p
+set environment variable for password to mysql_native_password
+    in .bashrc file in hone directory 
+        export var='password'
+
+in client terminal
+    npx create-react-app .
+    npm install axios
+    npm install react-router-dom
+     
+
+server terminal
+    npm init
+    npm install express mysql
+    npm install cars
+    npm install nodemon
+
+mySQL data base an table
+    mysql -u root -p
+    make data base
+    CREATE DATABASE PasswordManager;
+    use PasswordManager;
+    make table with columns
+    id, password, title table called PASSWORDS
+CREATE TABLE Passwords
+(
+id INT NOT NULL AUT0_INTCREMENT,
+password VARCHAR(255) NOT NULL,
+title VARCHAR(100) NOT NULL,
+);
+CREATE TABLE Passwords(id INT NOT NULL AUTO_INCREMENT, password VARCHAR(255) NOT NULL, title VARCHAR(100) NOT NULL, iv VARCHAR(255),PRIMARY KEY (id));
+SELECT * FROM Passwords;
+to show table 
+    DESC Passwords;
+delete the table
+    DROP TABLE Passwords;
