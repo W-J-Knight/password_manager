@@ -66,3 +66,7 @@ to show table
     DESC Passwords;
 delete the table
     DROP TABLE Passwords;
+
+check if running
+    sudo systemctl status mysql
+    
