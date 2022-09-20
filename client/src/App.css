@@ -122,20 +122,47 @@ button {
 
 }
 
-.modal {
+/* .modal {
   background-color: blue;
   color: lightgray;
   width: 400px;
   flex-direction: column;
   /* display: flex; */
   /* justify-content: space-between; */
-}
+/* }  */
 
-.info {
+ .info {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 
+} 
+.modal_sytle{
+  position: fixed;
+  top: 30%;
+  /* left: 30vw; */
+  /* transform: translate(-50%, -50%); */
+  background-color: rgba(64, 62, 62, .7);
+  /* padding: 50px; */
+  z-index: 1000;
+  /* height: 40vh; */
+  width: 400px;
+  display: flex;
+  /* flex-direction: column; */
+}
+.overlay_style{
+  position: fixed;
+  top: 30%;
+  /* left: 50%; */
+  /* right: 0;
+  bottom: 0; */
+  color:blue;
+  background-color:rgba(64, 62, 62, 0.9);
+  z-index: 1000;
+  width: 400px;
+  /* height: 40vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
 }
