@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 // promise base api
 import Axios from "axios";
-import Modal from "../Compponents/Modal";
+import DeleteModal from "./DeleteModal";
 
-function GetPassword() {
+function ListPassword() {
     const [password, setPassword] = useState("");
     const [title, setTitle] = useState("");
     const [passwordList, setPasswordList] = useState([]);
@@ -18,17 +18,20 @@ function GetPassword() {
 
     return (
         <>
+
             <div className="Passwords">
-                {openModal && (
-                    <Modal
-                        closeModal={setOpenModel}
-                        title={title}
-                        uncryptedPassword={password}
-                        id={id}
-                        iv={iv}
-                    />
-                )}
-                {passwordList.map((val, key) => {
+            {openModal && (
+                <DeleteModal
+                    closeModal={setOpenModel}
+                    title={title}
+                    uncryptedPassword={password}
+                    id={id}
+                    iv={iv}
+                    setPasswordList={setPasswordList}
+                    passwordList={passwordList}
+                />
+            )}
+                {passwordList.map((val,index) => {
                     return (
                         <div
                             className="password"
@@ -39,7 +42,7 @@ function GetPassword() {
                                 setId(val.id);
                                 setIv(val.iv);
                             }}
-                            key={key}
+                            key={index}
                         >
                             <p>{val.title}</p>
                         </div>
@@ -50,4 +53,4 @@ function GetPassword() {
     );
 }
 
-export default GetPassword;
+export default ListPassword;

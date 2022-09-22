@@ -9,6 +9,8 @@ export default function Navbar() {
             <ul>
                 <CustomLink to="/keep">Keep</CustomLink>
                 <CustomLink to="/retrieve">Retrieve</CustomLink>
+                <CustomLink to="/delete">Delete</CustomLink>
+                <CustomLink to="/update">Update</CustomLink>
             </ul>
         </nav>
     )

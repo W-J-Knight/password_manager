@@ -25,8 +25,8 @@ function Modal({ closeModal, title, uncryptedPassword, id, iv }) {
                 <div className="info">
                     <h1>{title}</h1>
                     <p>
-                        Password is <span className="bold">{showPassword}</span>
-                    </p>
+                        Password is </p><p className="bold">{showPassword}</p>
+                    
                 </div>
                 <button onClick={() => closeModal(false)}>x</button>
             </div>

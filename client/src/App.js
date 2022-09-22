@@ -9,7 +9,8 @@ import Home from './Pages/Home';
 import AddPassword from './Pages/AddPassword';
 import GetPasswords from './Pages/GetPasswords';
 import SitePassword from './Compponents/SitePassword';
-
+import DeletePasswords from './Pages/DeletePasswords';
+import UpdatePasswords from './Pages/UpdatePasswords';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/retrieve" element={<GetPasswords />} />
           <Route path="/retrieve/:title" element={<SitePassword />} />
           {/* delete a password  input a password and one  the website then a submit button*/}
+          <Route path="/delete" element={<DeletePasswords />} />
+          <Route path="/update" element={<UpdatePasswords />} />
         </Routes>
       </div>
     </div>
